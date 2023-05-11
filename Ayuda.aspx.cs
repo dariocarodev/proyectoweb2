@@ -7,14 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace proyectoweb2
 {
-    public partial class Inicio : System.Web.UI.Page
+    public partial class Ayuda : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
