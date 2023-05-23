@@ -48,11 +48,15 @@ tr{
 .searchbox {
     border: 2px solid black;
     border-radius: 3px;
+    margin: 0 auto;
+    display: block;
 }
 
 .searchbox:hover {
     border-color: gold;
 }
+
+
 
 
 

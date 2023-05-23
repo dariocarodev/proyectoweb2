@@ -68,9 +68,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ayuda.aspx" />
+    <Content Include="Estilos\lupa.png" />
     <Content Include="Estilos\style.css" />
+    <Content Include="Estilos\suma.png" />
+    <Content Include="Estilos\wallmain.jpg" />
+    <Content Include="Estilos\x.png" />
     <Content Include="Global.asax" />
     <Content Include="Inicio.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -90,6 +95,13 @@
     </Compile>
     <Compile Include="Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Principal.Master.cs">
       <DependentUpon>Principal.Master</DependentUpon>

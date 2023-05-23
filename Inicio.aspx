@@ -2,13 +2,26 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
        
 <div class = "gridmenu">
-<input type = "checkbox" id = "cat1" name = "cat1" value = "Bike">
-    <label for = "cat2">Gaseosas</label>
-<input type = "checkbox" id = "cat2" name = "cat2" value = "Bike">
-    <label for = "cat2">Comestibles</label>
-  <input type = "text" placeholder = "Buscar por Alias" class = "searchbox">
+<input type = "checkbox" id = "cat1" name = "cat1" value = "Gaseosa">
+    <label for = "cat1">Gaseosa</label>
+<input type = "checkbox" id = "cat2" name = "cat2" value = "Cerveza">
+    <label for = "cat2">Cerveza</label>
+    <input type = "checkbox" id = "cat3" name = "cat3" value = "Agua Saborizada">
+    <label for = "cat3">Agua Saborizada</label>
+      <input type = "checkbox" id = "cat4" name = "cat4" value = "Vinos">
+    <label for = "cat4">Vinos</label>
+     <input type = "checkbox" id = "cat5" name = "cat5" value = "Aguas">
+    <label for = "cat4">Aguas</label>
+    <div>
+        <input type = "text" placeholder = "Buscar por Alias" class = "searchbox">
+        <button type="button" class="btn btn-info"><img src="Estilos/lupa.png"/ style="width:25px; height:25px;"></button>
+        <button type="button" class="btn btn-success"><img src="Estilos/suma.png"/ style="width:25px; height:25px;"></button>
+        <button type="button" class="btn btn-danger"><img src="Estilos/x.png"/ style="width:25px; height:25px;"></button>
+    </div>
 </div>
-
+    
+ 
+    
 <table>
         <thead>
           <tr>
