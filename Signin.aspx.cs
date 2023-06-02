@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace proyectoweb2
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class Signin : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
