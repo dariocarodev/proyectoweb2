@@ -15,6 +15,7 @@
   <a class="navbar-brand" href="#">ABM</a>
   <a class="nav-link" href="Inicio.aspx">Inicio</a>
   <a class="nav-link" href="Ayuda.aspx">Ayuda</a>
+  <a class="nav-link" id="logout" href="Signin.aspx">Cerrar Sesión</a>
 </nav>
 
 <asp:ContentPlaceHolder ID="Contenido" runat="server">

@@ -7,6 +7,7 @@
     <title>ABM</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="Estilos/style.css"/>
+      <script src="Estilos/LoginUILogic.js"></script>
   </head>
 
 <body>
@@ -18,9 +19,9 @@
   <img src="Estilos/wallmain.jpg" class="card-img-top" alt="Inicio" style="width: 287px; height:350px">
   <div class="card-body">
     <h5 class="card-title">Bienvenido</h5>
-      <input type = "text" placeholder = "Usuario" class = "searchbox" style="margin-bottom: 5px;">
-      <input type = "password" placeholder = "Contraseña" class = "searchbox" style="margin-bottom: 5px;">
-    <a href="Inicio.aspx" class="btn btn-primary" style = "margin-top: 5px;" >Iniciar</a>
+      <input type = "text" id="user" placeholder = "Usuario" class = "searchbox" style="margin-bottom: 5px;">
+      <input type = "password" id="pass" placeholder = "Contraseña" class = "searchbox" style="margin-bottom: 5px;">
+    <input type="button" class="btn btn-primary" onclick="validador2()" value="Iniciar" style = "margin-top: 5px;" >
     <a href="Register.aspx" class="btn btn-success" style = "margin-top: 5px">Registrar</a>
   </div>
 </div>

@@ -21,13 +21,16 @@
                                                       width: 29rem; box-shadow: 1px 1px 5px black;">
   <div class="card-body">
     <h5 class="card-title">Registrese</h5>
-      <input type = "text" placeholder = "Usuario" class = "searchbox" style="margin-bottom: 5px;">
-      <input type = "text" placeholder = "Correo" class = "searchbox" style="margin-bottom: 5px";>
+       
+      <input type = "text" id="usuario" placeholder = "Usuario" class = "searchbox" style="margin-bottom: 5px;">
+      <input type = "text" id="correo" placeholder = "Correo" class = "searchbox" style="margin-bottom: 5px";>
       <input type = "password" id="contraseña" placeholder = "Contraseña" class = "searchbox" style="margin-bottom: 5px";>
-      <input type = "password" placeholder = "Repita Contraseña" class = "searchbox" style="margin-bottom: 5px";>
+      <input type = "password" id="contraseña2" placeholder = "Repita Contraseña" class = "searchbox" style="margin-bottom: 5px";>
       <input type="checkbox" id="ok" onclick="condiciones()">
       <label for="ok">¿Estás de acuerdo en ceder tus datos para el registro?</label>
-      <input type="button" id="btnreg" class="btn btn-success" onclick="condiciones()" value="Registrame" style="display: none;">
+      <a href="Signin.aspx" class="btn btn-primary" style = "margin-top: 5px; margin-bottom: 5px;" >Volver</a>
+      <input type="button" id="btnreg" class="btn btn-success" onclick="validador()" value="Registrame" style="display: none;">
+
   </div>
 </div>
 </body>
