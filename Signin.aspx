@@ -21,9 +21,10 @@
     <h5 class="card-title">Bienvenido</h5>
       <input type = "text" id="user" placeholder = "Usuario" class = "searchbox" style="margin-bottom: 5px;">
       <input type = "password" id="pass" placeholder = "Contraseña" class = "searchbox" style="margin-bottom: 5px;">
-    <input type="button" class="btn btn-primary" onclick="validador2()" value="Iniciar" style = "margin-top: 5px;" >
+    <input type="button" class="btn btn-primary" onclick="validador2()" value="Iniciar" style = "margin-top: 5px; height: 29px; width: 56px;" >
     <a href="Register.aspx" class="btn btn-success" style = "margin-top: 5px">Registrar</a>
   </div>
+       <asp:Button ID="Button1" runat="server" Text="Button" Height="29px" OnClick="Button1_Click" />
 </div>
 </body>
 
