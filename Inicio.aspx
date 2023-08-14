@@ -19,9 +19,7 @@
         <button type="button" class="btn btn-danger"><img src="Estilos/x.png"/ style="width:25px; height:25px;"></button>
     </div>
 </div>
-    
- 
-    
+
 <table>
         <thead>
           <tr>

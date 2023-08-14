@@ -57,9 +57,11 @@ tr{
     border-color: gold;
 }
 
+#logout {
+    color: crimson;
+   font-weight: bold;
+}
 
-
-
-
-
-
+#logout:hover {
+    color: brown;
+}
