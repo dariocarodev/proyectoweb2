@@ -7,7 +7,8 @@
     <h5 class="card-title">Bienvenido</h5>
       <input type = "text" placeholder = "Usuario" class = "searchbox" style="margin-bottom: 5px;">
       <input type = "password" placeholder = "Contraseña" class = "searchbox">
-    <a href="Inicio.aspx" class="btn btn-primary" style = "margin-top: 5px;">Iniciar</a>
+    <a href="Inicio.aspx" class="btn btn-primary" onclick="navon()" style = "margin-top: 5px;">Iniciar</a>
+      <a href="Inicio.aspx" class="btn btn-success" style = "margin-top: 5px;">Registrarse</a>
   </div>
 </div>
 

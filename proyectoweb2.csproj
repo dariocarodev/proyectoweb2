@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ayuda.aspx" />
+    <Content Include="Estilos\brain.js" />
     <Content Include="Estilos\lupa.png" />
     <Content Include="Estilos\style.css" />
     <Content Include="Estilos\suma.png" />
