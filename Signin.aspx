@@ -11,6 +11,7 @@
   </head>
 
 <body>
+
    <div class="card text-center" id="welcome" style=" position: absolute;
                                                       top: 50%;
                                                       left: 50%;
@@ -18,13 +19,22 @@
                                                      width: 18rem; box-shadow: 1px 1px 5px black;">
   <img src="Estilos/wallmain.jpg" class="card-img-top" alt="Inicio" style="width: 287px; height:350px">
   <div class="card-body">
+      <form runat="server">
     <h5 class="card-title">Bienvenido</h5>
-      <input type = "text" id="user" placeholder = "Usuario" class = "searchbox" style="margin-bottom: 5px;">
-      <input type = "password" id="pass" placeholder = "Contraseña" class = "searchbox" style="margin-bottom: 5px;">
-    <input type="button" class="btn btn-primary" onclick="validador2()" value="Iniciar" style = "margin-top: 5px" >
-    <a href="Register.aspx" class="btn btn-success" style = "margin-top: 5px">Registrar</a>
+      <asp:TextBox ID="user" runat="server"  placeholder = "Usuario" style="margin-bottom: 5px;"></asp:TextBox>
+          <asp:TextBox ID="password" runat="server"  placeholder = "Contraseña" style="margin-bottom: 5px;"></asp:TextBox>
+          <asp:Button ID="BtnRegistrar" runat="server" Text="Registrar" OnClick="BtnRegistrar_Click" />
+          <asp:Button ID="BtnIniciar" runat="server" OnClick="BtnIniciar_Click" Text="Iniciar" />
+    <!--<input type="button" class="btn btn-primary" onclick="validador2()" value="Iniciar" style = "margin-top: 5px" >-->
+    <!--<a href="Register.aspx" class="btn btn-success" style = "margin-top: 5px">Registrar</a>>-->
+          </form>
   </div>
 </div>
+
+    
+   
+    
+
 </body>
 
 </html>

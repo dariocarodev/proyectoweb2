@@ -14,6 +14,7 @@
   </head>
 
 <body>
+    <form id="form1" runat="server">
    <div class="card text-center" id="welcome" style=" position: absolute;
                                                       top: 50%;
                                                       left: 50%;
@@ -21,18 +22,22 @@
                                                       width: 29rem; box-shadow: 1px 1px 5px black;">
   <div class="card-body">
     <h5 class="card-title">Registrese</h5>
-       
-      <input type = "text" id="usuario" placeholder = "Usuario" class = "searchbox" style="margin-bottom: 5px;">
-      <input type = "text" id="correo" placeholder = "Correo" class = "searchbox" style="margin-bottom: 5px";>
-      <input type = "password" id="contraseña" placeholder = "Contraseña" class = "searchbox" style="margin-bottom: 5px";>
-      <input type = "password" id="contraseña2" placeholder = "Repita Contraseña" class = "searchbox" style="margin-bottom: 5px";>
-      <input type="checkbox" id="ok" onclick="condiciones()">
-      <label for="ok">¿Estás de acuerdo en ceder tus datos para el registro?</label>
-      <a href="Signin.aspx" class="btn btn-primary" style = "margin-top: 5px; margin-bottom: 5px;" >Volver</a>
-      <input type="button" id="btnreg" class="btn btn-success" onclick="validador()" value="Registrame" style="display: none;">
+       <asp:TextBox ID="usuario" placeholder="Usuario" style="margin-bottom: 5px;" runat="server" ></asp:TextBox>
+       <!--<<input type = "text" id="usuario" placeholder = "Usuario" class = "searchbox" style="margin-bottom: 5px;">>--> 
+      <asp:TextBox ID="correo" placeholder="Correo" style="margin-bottom: 5px;" runat="server" ></asp:TextBox>
+      <!--<<input type = "text" id="correo" placeholder = "Correo" class = "searchbox" style="margin-bottom: 5px";>>--> 
+      <asp:TextBox ID="password" placeholder="Contraseña" style="margin-bottom: 5px;" runat="server" ></asp:TextBox>
+      <!--<<input type = "password" id="contraseña" placeholder = "Contraseña" class = "searchbox" style="margin-bottom: 5px";>>--> 
+      <asp:TextBox ID="password2" placeholder="Repetir Contraseña" style="margin-bottom: 5px;" runat="server" ></asp:TextBox>
+       <!--<<input type = "password" id="contraseña2" placeholder = "Repita Contraseña" class = "searchbox" style="margin-bottom: 5px";>>--> 
+      <!--<<input type="checkbox" id="ok" onclick="condiciones()">>--> 
+      <asp:Button ID="BtnAceptar" runat="server" Text="Aceptar" OnClick="BtnAceptar_Click" />
+      <!--<<a href="Signin.aspx" class="btn btn-primary" style = "margin-top: 5px; margin-bottom: 5px;" >Volver</a>>--> 
+      <!--<<input type="button" id="btnreg" class="btn btn-success" onclick="validador()" value="Registrame" style="display: none;">>--> 
 
   </div>
 </div>
+    </form>
 </body>
 
 </html>
