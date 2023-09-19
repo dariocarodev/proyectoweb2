@@ -33,6 +33,11 @@ a {
   color: black;
 }
 
+.card-title {
+    display: grid;
+    place-items: center;
+}
+
 table {
     margin-left: auto;
     margin-right: auto;
@@ -64,9 +69,4 @@ tr{
 
 #logout:hover {
     color: brown;
-}
-
-.card-title{
-    display: flex;
-    float:left;
 }

@@ -27,13 +27,10 @@
           <asp:Button ID="BtnIniciar" runat="server" OnClick="BtnIniciar_Click" Text="Iniciar" />
     <!--<input type="button" class="btn btn-primary" onclick="validador2()" value="Iniciar" style = "margin-top: 5px" >-->
     <!--<a href="Register.aspx" class="btn btn-success" style = "margin-top: 5px">Registrar</a>>-->
+          <br><asp:Label ID="Alert" runat="server" style="color: red; font-style: italic; font-size: small;"></asp:Label>
           </form>
   </div>
 </div>
-
-    
-   
-    
 
 </body>
 
