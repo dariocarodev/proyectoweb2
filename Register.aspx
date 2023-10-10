@@ -32,6 +32,7 @@
        <!--<<input type = "password" id="contraseña2" placeholder = "Repita Contraseña" class = "searchbox" style="margin-bottom: 5px";>>--> 
       <!--<<input type="checkbox" id="ok" onclick="condiciones()">>--> 
       <asp:Button ID="BtnAceptar" runat="server" Text="Aceptar" OnClick="BtnAceptar_Click" />
+      <br><asp:Label ID="Alert" runat="server" style="color: red; font-style: italic; font-size: small;"></asp:Label>
       <!--<<a href="Signin.aspx" class="btn btn-primary" style = "margin-top: 5px; margin-bottom: 5px;" >Volver</a>>--> 
       <!--<<input type="button" id="btnreg" class="btn btn-success" onclick="validador()" value="Registrame" style="display: none;">>--> 
 

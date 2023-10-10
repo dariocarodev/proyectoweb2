@@ -36,6 +36,7 @@ a {
 .card-title {
     display: grid;
     place-items: center;
+    margin-bottom: 2px;
 }
 
 table {

@@ -71,38 +71,44 @@ namespace proyectoweb2
 
             Alert.Text = "";
 
-            string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\944556\source\repos\dariocarodev\dbdistribuidora.accdb";
-            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            if (user.Text == "" || user.Text == null || password.Text == "" || password.Text == null)
             {
-                string usuario = string.Empty, query;
-
-                connection.Open();
-
-                query = "SELECT * FROM usuarios where usuario = '" + user.Text +"' and contraseña = '" + password.Text +"'";
-
-                new OleDbCommand(query, connection);
-
-                OleDbCommand comando = new OleDbCommand(query, connection);
-
-                OleDbDataReader reader = comando.ExecuteReader();
-
-                while (reader.Read()){ usuario = reader.GetString(4); }
-
-                if (!String.IsNullOrEmpty(usuario))
+                Alert.Text = "Ningún campo puede quedar vacio.";
+            }
+            else
+            {
+                string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\944556\source\repos\dariocarodev\dbdistribuidora.accdb";
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
                 {
-                    connection.Close();
-                    Response.Redirect("Inicio.aspx");
-                }
-                else
-                {
-                    Alert.Text = "Usario sin registrar o datos incorrectos.";
+                    string usuario = string.Empty, query;
+
+                    connection.Open();
+
+                    query = "SELECT * FROM usuarios where usuario = '" + user.Text + "' and contraseña = '" + password.Text + "'";
+
+                    new OleDbCommand(query, connection);
+
+                    OleDbCommand comando = new OleDbCommand(query, connection);
+
+                    OleDbDataReader reader = comando.ExecuteReader();
+
+                    while (reader.Read()) { usuario = reader.GetString(2); }
+
+                    if (!String.IsNullOrEmpty(usuario))
+                    {
+                        connection.Close();
+                        Response.Redirect("Inicio.aspx");
+                    }
+                    else
+                    {
+                        Alert.Text = "Usuario sin registrar o datos incorrectos.";
+                    }
                 }
             }
-            
         }
         protected void BtnRegistrar_Click(object sender, EventArgs e)
         {
             Response.Redirect("Register.aspx");
         }
     }
-    }
+}
