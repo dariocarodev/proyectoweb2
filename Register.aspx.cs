@@ -30,9 +30,7 @@ namespace proyectoweb2
             if (user == "" || user == null || email == "" || email == null || pass == "" || pass == null || pass2 == "" || pass2 == null)
             {
                 Alert.Text = "Ningún campo puede quedar vacio.";
-            }
-            else
-            {
+            }else{
                 if (pass != pass2)
                 {
                     Alert.Text = "Las contraseñas no coinciden.";
@@ -64,13 +62,38 @@ namespace proyectoweb2
                         else
                         {
                             query = "INSERT INTO USUARIOS (mail, usuario, contraseña) VALUES ('" + email + "','" + user + "','" + pass + "');";
+
                             new OleDbCommand(query, connection);
+
                             OleDbCommand comando2 = new OleDbCommand(query, connection);
+
                             int execute = comando2.ExecuteNonQuery(); /* Devuelve el numero de filas (debe ser entero)*/
+
+                            connection.Close();
+
                             Response.Redirect("Signin.aspx");
                         }
                     }
                 }
+            }
+        }
+        protected void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Signin.aspx");
+        }
+
+        protected void CbPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CbPass.Checked)
+            {
+
+                password.TextMode = TextBoxMode.SingleLine;
+                password2.TextMode = TextBoxMode.SingleLine;
+            }
+            else
+            {
+                password.TextMode = TextBoxMode.Password;
+                password2.TextMode = TextBoxMode.Password;
             }
         }
     }

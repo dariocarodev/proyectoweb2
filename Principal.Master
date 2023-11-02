@@ -13,10 +13,8 @@
   <body>
 
 <nav class="navbar navbar-dark bg-dark justify-content-center" id="barra">
-  <a class="navbar-brand" href="#">ABM</a>
-  <a class="nav-link" href="Inicio.aspx">Inicio</a>
-  <a class="nav-link" href="Ayuda.aspx">Ayuda</a>
-  <a class="nav-link" id="logout" href="Signin.aspx">Cerrar Sesión</a>
+  <a class="navbar-brand" href="#">StockeAR</a>
+  <a class="nav-link" href="Signin.aspx">Volver</a>
 </nav>
 
 

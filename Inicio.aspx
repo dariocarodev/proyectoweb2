@@ -1,26 +1,49 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="Inicio.aspx.cs" Inherits="proyectoweb2.Inicio" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
        
-<div class = "gridmenu">
-<input type = "checkbox" id = "cat1" name = "cat1" value = "Gaseosa">
-    <label for = "cat1">Gaseosa</label>
-<input type = "checkbox" id = "cat2" name = "cat2" value = "Cerveza">
-    <label for = "cat2">Cerveza</label>
-    <input type = "checkbox" id = "cat3" name = "cat3" value = "Agua Saborizada">
-    <label for = "cat3">Agua Saborizada</label>
-      <input type = "checkbox" id = "cat4" name = "cat4" value = "Vinos">
-    <label for = "cat4">Vinos</label>
-     <input type = "checkbox" id = "cat5" name = "cat5" value = "Aguas">
-    <label for = "cat4">Aguas</label>
-    <div>
-        <input type = "text" placeholder = "Buscar por Alias" class = "searchbox">
-        <button type="button" class="btn btn-info"><img src="Estilos/lupa.png"/ style="width:25px; height:25px;"></button>
-        <button type="button" class="btn btn-success"><img src="Estilos/suma.png"/ style="width:25px; height:25px;"></button>
-        <button type="button" class="btn btn-danger"><img src="Estilos/x.png"/ style="width:25px; height:25px;"></button>
-    </div>
-</div>
+    <form id="form1" runat="server">
+        
+    <div class = "gridmenu">
+    <asp:Label ID="Welcome" runat="server" Text="Bienvenido/a: "></asp:Label>
+    <asp:Label ID="LabelUser" runat="server" Font-Underline="False" ForeColor="#FFCC00"></asp:Label>
+    <asp:Button ID="BtnCerrar"  runat="server" Text="X" OnClick="BtnCerrar_Click" BackColor="#666666" ForeColor="#FFCC00" BorderStyle="None"/>
+     </div>
 
-<table>
+<div class = "gridmenu">
+    <asp:CheckBox ID="Alchoholicas" AutoPostBack="true" runat="server" BackColor="#666666" BorderColor="Black" BorderStyle="Dotted" ForeColor="#FFCC00" Text="Alcoholicas" OnCheckedChanged="Alchoholicas_CheckedChanged" />
+     <asp:CheckBox ID="NoAlchoholicas"  AutoPostBack="true" runat="server" BackColor="#666666" BorderColor="Black" BorderStyle="Dotted" ForeColor="#FFCC00" Text="No Alcoholicas" OnCheckedChanged="NoAlchoholicas_CheckedChanged" />
+    </div>
+
+        <div class = "gridmenu">
+            <asp:TextBox ID="TxtSearch" placeholder = "Buscar por nombre" runat="server"></asp:TextBox>
+            <asp:Button ID="Buscar" runat="server" OnClick="Buscar_Click" Text="Buscar" BackColor="#666666" BorderStyle="None" ForeColor="#FFCC00"/>
+    <asp:Button ID="BtnEliminar"  runat="server" Text="Eliminar" OnClick="BtnEliminar_Click" BackColor="#666666" ForeColor="Red" BorderStyle="None" Height="22px"/>
+            <asp:CheckBox ID="CBDili" runat="server" AutoPostBack="True" BackColor="#666666" Enabled="False" EnableViewState="False" ForeColor="#FFCC00" OnCheckedChanged="CBDili_CheckedChanged" Text="Diligenciado" />
+           
+    </div>
+
+        <div class = "gridmenu">
+        <asp:Label ID="LDelete" runat="server" BorderStyle="Dotted" ForeColor="#FFCC00"></asp:Label>
+             </div>
+
+        <div class = "gridmenu">
+            <asp:TextBox ID="TxtNombre" placeholder = "Nombre" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TxtDesc" placeholder = "Descripción" runat="server" Width="185px"></asp:TextBox>
+            <asp:TextBox ID="TxtCosto" placeholder = "Costo" runat="server" Width="70px" TextMode="Number"></asp:TextBox>
+            <asp:TextBox ID="TxtVenta" placeholder = "Venta" runat="server" Width="70px" TextMode="Number"></asp:TextBox>
+            <asp:TextBox ID="TxtStock" placeholder = "Stock" runat="server" Width="70px" TextMode="Number"></asp:TextBox>
+            <asp:DropDownList ID="DropTipo" runat="server" AutoPostBack="True">
+                <asp:ListItem>No Alcoholicas</asp:ListItem>
+                <asp:ListItem>Alcoholicas</asp:ListItem>
+            </asp:DropDownList>
+            <asp:TextBox ID="TxtProve" placeholder = "Proveedor" runat="server"></asp:TextBox>
+             <asp:Button ID="BtnSumar" runat="server" Text="+" OnClick="BtnSumar_Click" BackColor="#666666" ForeColor="#FFCC00" BorderStyle="None" style="height: 23px"/>
+            </div>
+
+         <asp:GridView ID="Grid" runat="server">
+        </asp:GridView>
+
+<!--<table>
         <thead>
           <tr>
             <th>Product ID</th>
@@ -67,7 +90,9 @@
            <td>Lorem Ipsum</td>
           </tr>
         </tbody>
-      </table>
+      </table> -->
+
+    </form>
 
 </asp:Content>
 

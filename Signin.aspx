@@ -22,7 +22,8 @@
       <form runat="server">
     <h5 class="card-title">Bienvenido</h5>
       <asp:TextBox ID="user" runat="server"  placeholder = "Usuario" style="margin-bottom: 5px;"></asp:TextBox>
-          <asp:TextBox ID="password" runat="server"  placeholder = "Contraseña" style="margin-bottom: 5px;"></asp:TextBox>
+          <asp:TextBox ID="password" runat="server" TextMode="Password" placeholder = "Contraseña" style="margin-bottom: 5px;"></asp:TextBox>
+          <asp:CheckBox ID="CbPass" runat="server" AutoPostBack="True" OnCheckedChanged="CbPass_CheckedChanged" style="display: block" Text="Mostrar"/>
           <asp:Button ID="BtnRegistrar" runat="server" Text="Registrar" OnClick="BtnRegistrar_Click" />
           <asp:Button ID="BtnIniciar" runat="server" OnClick="BtnIniciar_Click" Text="Iniciar" />
     <!--<input type="button" class="btn btn-primary" onclick="validador2()" value="Iniciar" style = "margin-top: 5px" >-->

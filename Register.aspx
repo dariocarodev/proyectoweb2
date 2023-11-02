@@ -21,23 +21,27 @@
                                                       transform: translate(-50%, -50%);
                                                       width: 29rem; box-shadow: 1px 1px 5px black;">
   <div class="card-body">
-    <h5 class="card-title">Registrese</h5>
+    <h5 class="card-title">Registro</h5>
        <asp:TextBox ID="usuario" placeholder="Usuario" style="margin-bottom: 5px;" runat="server" ></asp:TextBox>
        <!--<<input type = "text" id="usuario" placeholder = "Usuario" class = "searchbox" style="margin-bottom: 5px;">>--> 
-      <asp:TextBox ID="correo" placeholder="Correo" style="margin-bottom: 5px;" runat="server" ></asp:TextBox>
+      <asp:TextBox ID="correo" placeholder="Correo" style="margin-bottom: 5px;" runat="server" TextMode="Email" ></asp:TextBox>
       <!--<<input type = "text" id="correo" placeholder = "Correo" class = "searchbox" style="margin-bottom: 5px";>>--> 
-      <asp:TextBox ID="password" placeholder="Contraseña" style="margin-bottom: 5px;" runat="server" ></asp:TextBox>
+      <asp:TextBox ID="password" placeholder="Contraseña" TextMode="Password" style="margin-bottom: 5px;" runat="server" ></asp:TextBox>
       <!--<<input type = "password" id="contraseña" placeholder = "Contraseña" class = "searchbox" style="margin-bottom: 5px";>>--> 
-      <asp:TextBox ID="password2" placeholder="Repetir Contraseña" style="margin-bottom: 5px;" runat="server" ></asp:TextBox>
+      <asp:TextBox ID="password2" placeholder="Repetir Contraseña" TextMode="Password" style="margin-bottom: 5px;" runat="server" ></asp:TextBox>
+          <asp:CheckBox ID="CbPass" runat="server" AutoPostBack="True" OnCheckedChanged="CbPass_CheckedChanged" style="display: block" Text="Mostrar"/>
+       <asp:Button ID="BtnCancelar" runat="server" OnClick="BtnCancelar_Click" Text="Cancelar" />
+      <asp:Button ID="BtnAceptar" runat="server" Text="Aceptar" OnClick="BtnAceptar_Click" />
        <!--<<input type = "password" id="contraseña2" placeholder = "Repita Contraseña" class = "searchbox" style="margin-bottom: 5px";>>--> 
       <!--<<input type="checkbox" id="ok" onclick="condiciones()">>--> 
-      <asp:Button ID="BtnAceptar" runat="server" Text="Aceptar" OnClick="BtnAceptar_Click" />
       <br><asp:Label ID="Alert" runat="server" style="color: red; font-style: italic; font-size: small;"></asp:Label>
       <!--<<a href="Signin.aspx" class="btn btn-primary" style = "margin-top: 5px; margin-bottom: 5px;" >Volver</a>>--> 
       <!--<<input type="button" id="btnreg" class="btn btn-success" onclick="validador()" value="Registrame" style="display: none;">>--> 
 
   </div>
 </div>
+        <p>
+            &nbsp;</p>
     </form>
 </body>
 
